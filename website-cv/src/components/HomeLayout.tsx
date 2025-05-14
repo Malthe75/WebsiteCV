@@ -5,7 +5,7 @@ import { Navbar } from './Navbar';
 import { MobileMenu } from './MobileMenu';
 import { Home } from './sections/Home';
 import { About } from './sections/About';
-import { Projects } from './sections/Projects';
+import { ProjectCards } from './sections/ProjectCards';
 
 function HomeLayout() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,7 +24,7 @@ function HomeLayout() {
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home />
         <About />
-        <Projects />
+        <ProjectCards />
       </div>
     </>
   );
