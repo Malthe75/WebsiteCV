@@ -1,33 +1,16 @@
-import { useState } from 'react';
-import {LoadingScreen} from './components/LoadingScreen';
-import {Navbar} from './components/Navbar';
-import {MobileMenu} from './components/MobileMenu';
-import { Home } from './components/sections/Home';
-import {About} from './components/sections/About';
-import { Projects } from './components/sections/Projects';
-import './index.css';
+// App.tsx
+import { Routes, Route } from 'react-router-dom';
+import HomeLayout from './components/HomeLayout.tsx';
+import { ProjectDetail } from './components/ProjectDetail';
+import { About } from './components/sections/About.tsx';
 
-function App(){
-
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
-
-  return ( 
-  <>
-    {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)}/>}
-    
-    <div className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} bg-gray-950 text-gray-200`}>
-
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <Home/>
-      <About/>
-      <Projects/>
-    </div>
-      
-
-      
-  </>
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomeLayout />} />
+      <Route path="/project/:id" element={<ProjectDetail />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
   );
 }
 

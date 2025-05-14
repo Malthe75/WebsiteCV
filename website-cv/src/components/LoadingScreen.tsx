@@ -7,7 +7,7 @@ interface LoadingScreenProps {
 export const LoadingScreen: React.FC<LoadingScreenProps> = ({onComplete}) => {
 
     const [text, setText] = useState("")
-    const fullText = "<Hello Wild World/>";
+    const fullText = "Loading...";
 
     useEffect(() => {
         let index = 0;

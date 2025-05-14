@@ -21,7 +21,7 @@ export const Projects = () => {
                             ))}
                             </div>
                             <div className="flex justify-between items-center mt-8 font-bold">
-                                <a href="#SpecificProject" className="text-blue-400 hover:text-blue-300 transition-colors"> View Project </a>
+                                <a href="/project/1" className="text-blue-400 hover:text-blue-300 transition-colors"> View Project </a>
                             </div>
                         </div>
 
