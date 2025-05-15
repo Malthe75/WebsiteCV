@@ -78,9 +78,41 @@ export const ProjectDetail: React.FC = () => {
                         </div>
 
                         {/* Challenges */}
+                        {project.challenges &&(
+                        <div className="min-h-[200px] max-w-[600px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
+                            <h3 className="text-xl font-bold mb-2">Overview</h3>
+                            <p className="text-gray-400 mb-4 break-words">
+                                {project.challenges}
+                            </p>
+                        </div>
+                        )}
                         {/* Learnings */}
+                        {project.learnings &&(
+                        <div className="min-h-[200px] max-w-[600px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
+                            <h3 className="text-xl font-bold mb-2">Overview</h3>
+                            <p className="text-gray-400 mb-4 break-words">
+                                {project.learnings}
+                            </p>
+                        </div>
+                        )}
                         {/* Decisions */}
+                        {project.decisions &&(
+                        <div className="min-h-[200px] max-w-[600px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
+                            <h3 className="text-xl font-bold mb-2">Overview</h3>
+                            <p className="text-gray-400 mb-4 break-words">
+                                {project.decisions}
+                            </p>
+                        </div>
+                        )}
                         {/* Future */}
+                        {project.decisions &&(
+                        <div className="min-h-[200px] max-w-[600px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
+                            <h3 className="text-xl font-bold mb-2">Overview</h3>
+                            <p className="text-gray-400 mb-4 break-words">
+                                {project.decisions}
+                            </p>
+                        </div>
+                        )}
                     </div>
                 </div>
             </section>
