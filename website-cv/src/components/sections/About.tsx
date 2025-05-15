@@ -1,7 +1,7 @@
 import { RevealOnScroll } from "../revealOnScroll"
 export const About = () =>{
 
-    const frontendSkills = ["React", "Vue", "TypeScript", "TailwindCSS", "Svelte??"];
+    const frontendSkills = ["React", "Vue", "TypeScript", "TailwindCSS"];
     const backendSkills = ["Java", "C#", "MongoDB", "Python", "PHP"];
 
 
@@ -12,8 +12,8 @@ export const About = () =>{
                     <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-teal-400 to-blue-600 bg-clip-text text-transparent text-center"> About Me</h2>
 
                     <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-                        <p className="text-gray-300 mb-6">
-                            Passionate and some shit, i develop i do stuff something something yeah?.
+                        <p className="text-gray-300 mb-6 text-center">
+                            Curious and driven software developer with a strong analytical mindset and a passion for learning. I enjoy working in collaborative environments and strive to deliver robust, clean-code solutions.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -46,25 +46,29 @@ export const About = () =>{
                                 <h3 className="text-xl font-bold mb-4"> Education </h3>
                                 <ul className="list-disc list-inside text-gray-300 space-y-2">
                                     <li>
-                                        <strong> Diplomingeniør i softwareteknologi</strong> Syddansk Universitet (2020-2024)
-                                    </li>
-                                    <li>
-                                        Relevant Coursework:  A BUNCH OF TECHNOLOGY!!!
+                                        <strong> Diploma Engineer in Software Technology</strong> Syddansk Universitet (2020-2024)
+                                        <div style={{ marginLeft: '1rem' }}>
+                                            <em>Project-orinted education, with course work related to software development</em>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
                             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
                                 <h3 className="text-xl font-bold mb-4"> Work Experience </h3>
-                                <div className="space-y-4 text-gray-300">
-                                    <div>
-                                        <h4> Frontend Developer Internship at Skandiq</h4>
-                                        <p> Shopify development, with a focus on custom css solutions</p>
-                                    </div>
-                                    <div>
-                                        <h4> Software Developer Intern at Intellifinder</h4>
-                                        <p> Did a bunch of stuff</p>
-                                    </div>
-                                </div>
+                                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                                    <li>
+                                        <strong> Internship Skandiq</strong> (2025)
+                                        <div style={{ marginLeft: '1rem' }}>
+                                            <em>Shopify development, with a focus on custom CSS solutions</em>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong> Internship Intellifinder</strong> (2024)
+                                        <div style={{ marginLeft: '1rem' }}>
+                                            <em>Frontend redesign, using PrimeNG elements in Angular</em>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                                 

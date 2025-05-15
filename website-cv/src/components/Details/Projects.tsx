@@ -20,9 +20,9 @@ export const projects: Project[] = [
         title: "World Of Zuul - 1ˢᵗ Semester Project",
         smallDesc: "My first bigger project, which is a small game that targets a sustainable development goal",
         techStack: ["Java", "Git"],
-        githubUrl: "github.com/T5-1/Semesterprojekt",
+        githubUrl: "https://github.com/T5-1/Semesterprojekt",
         overview: "This project is a text-based adventure game that allows players to explore different rooms and interact with objects. The game is designed to be simple yet engaging, with a focus on sustainability and environmental awareness.",
-        features: ["Game"],
+        features: ["Text-based Adventure", "Sustainable Development Goal", "Interactive"],
     },
     {
         id: "tv2-credits-database",
@@ -59,5 +59,14 @@ export const projects: Project[] = [
         githubUrl: "",
         overview: "This project is a videogame card game made in Unity, including assets made from the ground up. The game is designed to be fun and engaging, with a focus on gameplay and user experience.",
         features: ["Video Game", "Unity", "C#"],
+    },
+    {
+        id: "website-portfolio",
+        title: "Website Portfolio - Personal Project",
+        smallDesc: "Personal portfolio website to showcase my projects and skills (This website)",
+        techStack: ["React", "TypeScript", "Tailwind CSS", "Git"],
+        githubUrl: "",
+        overview: "This project is a personal portfolio website to showcase my projects and skills. The website is designed to be user-friendly and visually appealing, with a focus on showcasing my work.",
+        features: ["Personal Portfolio", "Project Showcase", "About Me"],
     }
 ];

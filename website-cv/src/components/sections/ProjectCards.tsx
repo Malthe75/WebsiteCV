@@ -1,10 +1,10 @@
 import { RevealOnScroll } from "../revealOnScroll"
 import { projects } from "../Details/Projects";
-import type { Project } from "../Details/Projects"; // Make sure Project is exported from Projects.ts
+import type { Project } from "../Details/Projects"; 
 
 export const ProjectCards =  () => {
     return (
-        <section id="ProjectCards" className="min-h-screen flex items-center justify-center py-20">
+        <section id="projects" className="min-h-screen flex items-center justify-center py-20">
             <RevealOnScroll>
                 <div className="max-w-5xl mx-auto px-4">
                     <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-teal-400 to-blue-600 bg-clip-text text-transparent text-center"> Featured Projects </h2>

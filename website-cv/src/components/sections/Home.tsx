@@ -10,7 +10,7 @@ export const Home = () => {
                     </h1>
 
                     <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-                        "Analytical, Ethical, Epic, yep thats me."
+                        "Analytical, curious, and creatively minded"
                     </p>
                     
                     <div className="flex flex-col items-center space-y-4">
