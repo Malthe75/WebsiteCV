@@ -1,7 +1,7 @@
 
 import { Navbar } from './Navbar';
 import { useState } from 'react';
-import { projects } from './Details/Projects';
+import { schoolProjects } from './Details/Projects';
 import { useParams } from 'react-router-dom';
 
 
@@ -9,7 +9,7 @@ export const ProjectDetail: React.FC = () => {
     const {projectId} = useParams<{ projectId: string }>();
 
     // Find the project by ID
-    const project = projects.find(p => p.id === projectId);
+    const project = schoolProjects.find(p => p.id === projectId);
     if (!project) {
         return <div>Project not found</div>;
     }

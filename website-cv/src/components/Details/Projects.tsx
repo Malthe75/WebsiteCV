@@ -3,7 +3,7 @@ export type Project ={
     title: string;
     smallDesc: string;
     techStack: string[];
-    githubUrl: string;
+    githubUrl?: string;
     overview: string;
     features: string[];
     liveUrl?: string;
@@ -14,7 +14,7 @@ export type Project ={
     future?: string;
 }
 
-export const projects: Project[] = [
+export const schoolProjects: Project[] = [
     {
         id: "world-of-zuul",
         title: "World Of Zuul - 1ˢᵗ Semester Project",
@@ -59,7 +59,10 @@ export const projects: Project[] = [
         githubUrl: "",
         overview: "This project is a videogame card game made in Unity, including assets made from the ground up. The game is designed to be fun and engaging, with a focus on gameplay and user experience.",
         features: ["Video Game", "Unity", "C#"],
-    },
+    }
+];
+
+export const personalProjects: Project[] = [
     {
         id: "website-portfolio",
         title: "Website Portfolio - Personal Project",
@@ -68,5 +71,42 @@ export const projects: Project[] = [
         githubUrl: "",
         overview: "This project is a personal portfolio website to showcase my projects and skills. The website is designed to be user-friendly and visually appealing, with a focus on showcasing my work.",
         features: ["Personal Portfolio", "Project Showcase", "About Me"],
+    },
+    {
+        id: "unity-slot-machine",
+        title: "Unity - Slot Machine",
+        smallDesc: "A fun project for a new years party",
+        techStack: ["Unity", "C#", "Git"],
+        githubUrl: "",
+        overview: "PLACEHOLDER",
+        features: ["Slot machine", "Fun"]
+    },
+    {
+        id: "unity-fighting-game",
+        title: "Unity 2D - Fighting Game",
+        smallDesc: "A 2D Figthing game incorporating real-life images",
+        techStack: ["Unity", "C#", "Git"],
+        githubUrl: "",
+        overview: "Placeholder",
+        features: ["Fighting game"]
+    }
+];
+
+export const workProjects: Project[] = [
+    {
+        id: "hr-on-convert-service",
+        title: "Convert Service",
+        smallDesc: "My project at HR-ON, used in production for converting, validating, merging and resizing various files",
+        techStack: ["Typescript", "Docker", "CI/CD", "AWS Fargate", "Express"],
+        overview: "PLACEHOLDER",
+        features: ["Microservice", "Conversion", "Image resizing", "Merging", "Validating"],
+    },
+    {
+        id: "intellifinder-redesign",
+        title: "Intellifinder Frontend Redesign",
+        smallDesc: "Part of a big redesign for Intellifinders frontend",
+        techStack: ["Typescript", "PLACEHOLDER"],
+        overview: "PLACEHOLDER",
+        features: ["PLACEHOLDER"]
     }
 ];
