@@ -29,7 +29,7 @@ export const schoolProjects: Project[] = [
       "Sustainable Development Goal",
       "Interactive",
     ],
-    images: ["/images/NeedForTree.png"],
+    images: ["/images/NeedForTree.png", "/images/NeedForTree.png"],
   },
   {
     id: "tv2-credits-database",

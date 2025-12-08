@@ -2,20 +2,22 @@ import { Navbar } from "./Navbar";
 import { useState } from "react";
 import { schoolProjects } from "./Details/Projects";
 import { useParams } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules"; // v10+ React import
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export const ProjectDetail: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
-
   const project = schoolProjects.find((p) => p.id === projectId);
-  // if (!project) {
-  //   return <div>Project not found</div>;
-  // }
 
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-200">
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> {/* OUTSIDE */}
+      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
       <div className="pt-16 px-4 max-w-4xl mx-auto text-center">
         <h1 className="text-4xl mt-15 font-bold mb-4">{project?.title}</h1>
         {project?.overview && (
@@ -28,7 +30,6 @@ export const ProjectDetail: React.FC = () => {
                 gap-4 mb-10 px-4 py-3 rounded-lg border border-gray-800 
                 bg-gray-900/40"
         >
-          {/* GitHub button */}
           {project?.githubUrl && (
             <a
               href={project.githubUrl}
@@ -39,10 +40,8 @@ export const ProjectDetail: React.FC = () => {
             </a>
           )}
 
-          {/* Divider dot (hidden on mobile) */}
           <span className="hidden md:block text-gray-500">•</span>
 
-          {/* Tech stack chips */}
           <div className="flex flex-wrap justify-center gap-2">
             {project?.techStack.map((t, i) => (
               <span
@@ -55,12 +54,26 @@ export const ProjectDetail: React.FC = () => {
           </div>
         </div>
 
+        {/* SWIPER IMAGE VIEWER */}
         {project?.images && project.images.length > 0 && (
-          <img
-            src={project.images[0]}
-            alt={project.title}
-            className="rounded-xl shadow-lg mx-auto max-h-96 object-contain mb-12"
-          />
+          <Swiper
+            modules={[Navigation, Pagination]}
+            navigation
+            pagination={{ clickable: true }}
+            spaceBetween={16}
+            slidesPerView={1}
+            className="max-w-4xl mx-auto mb-12"
+          >
+            {project.images.map((img, i) => (
+              <SwiperSlide key={i}>
+                <img
+                  src={img}
+                  alt={`${project.title} screenshot ${i + 1}`}
+                  className="rounded-xl shadow-lg object-contain mx-auto max-h-96"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         )}
       </div>
     </div>
