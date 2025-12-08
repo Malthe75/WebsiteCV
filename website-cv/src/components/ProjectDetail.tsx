@@ -6,121 +6,63 @@ import { useParams } from "react-router-dom";
 export const ProjectDetail: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
 
-  // Find the project by ID
   const project = schoolProjects.find((p) => p.id === projectId);
-  if (!project) {
-    return <div>Project not found</div>;
-  }
+  // if (!project) {
+  //   return <div>Project not found</div>;
+  // }
 
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className={`min-h-screen bg-gray-950 text-gray-200`}>
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <section className="min-h-screen flex items-center justify-center relative">
-        <div className="text-center z-10 px-4 ">
-          <h1 className="text-5xl font-bold text-white mb-8">
-            {project.title}
-          </h1>
+    <div className="min-h-screen bg-gray-950 text-gray-200">
+      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> {/* OUTSIDE */}
+      <div className="pt-16 px-4 max-w-4xl mx-auto text-center">
+        <h1 className="text-4xl mt-15 font-bold mb-4">{project?.title}</h1>
+        {project?.overview && (
+          <p className="text-gray-700 text-lg mb-6">{project.overview}</p>
+        )}
 
-          {/* BOXES */}
-          <div className="flex flex-wrap justify-center gap-6">
-            <div className="min-h-[200px] max-w-[600px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
-              <h3 className="text-xl font-bold mb-2">Overview</h3>
-              <p className="text-gray-400 mb-4 break-words">
-                {project.overview}
-              </p>
-            </div>
+        {/* METADATA BAR */}
+        <div
+          className="mx-auto w-fit flex flex-col md:flex-row items-center 
+                gap-4 mb-10 px-4 py-3 rounded-lg border border-gray-800 
+                bg-gray-900/40"
+        >
+          {/* GitHub button */}
+          {project?.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              className="px-5 py-2 bg-blue-600 rounded-full hover:bg-blue-500 transition"
+            >
+              GitHub
+            </a>
+          )}
 
-            {/* LINK BOX */}
-            <div className="min-h-[200px] max-w-[600px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
-              <h3 className="text-xl font-bold mb-2">Links</h3>
-              <p className="text-gray-400 mb-4 break-words">
-                <p>
-                  Github:&
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                  >
-                    {project.githubUrl}
-                  </a>
-                </p>
-              </p>
-            </div>
+          {/* Divider dot (hidden on mobile) */}
+          <span className="hidden md:block text-gray-500">•</span>
 
-            {/* TECH STACK BOX */}
-            <div className="min-h-[200px] max-w-[500px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
-              <h3 className="text-xl font-bold mb-2">Tech Stack</h3>
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.map((tech, key) => (
-                  <span
-                    key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                        hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all mb-2 whitespace-nowrap"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* FEATURES BOX */}
-            <div className="min-h-[200px] max-w-[500px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
-              <h3 className="text-xl font-bold mb-2">Features</h3>
-              <div className="flex flex-wrap gap-2">
-                {project.features.map((feature, key) => (
-                  <span
-                    key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                        hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all mb-2 whitespace-nowrap"
-                  >
-                    {feature}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Challenges */}
-            {project.challenges && (
-              <div className="min-h-[200px] max-w-[600px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
-                <h3 className="text-xl font-bold mb-2">Overview</h3>
-                <p className="text-gray-400 mb-4 break-words">
-                  {project.challenges}
-                </p>
-              </div>
-            )}
-            {/* Learnings */}
-            {project.learnings && (
-              <div className="min-h-[200px] max-w-[600px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
-                <h3 className="text-xl font-bold mb-2">Overview</h3>
-                <p className="text-gray-400 mb-4 break-words">
-                  {project.learnings}
-                </p>
-              </div>
-            )}
-            {/* Decisions */}
-            {project.decisions && (
-              <div className="min-h-[200px] max-w-[600px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
-                <h3 className="text-xl font-bold mb-2">Overview</h3>
-                <p className="text-gray-400 mb-4 break-words">
-                  {project.decisions}
-                </p>
-              </div>
-            )}
-            {/* Future */}
-            {project.decisions && (
-              <div className="min-h-[200px] max-w-[600px] max-h-[300px] p-6 rounded-xl border border-white/10 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all overflow-auto">
-                <h3 className="text-xl font-bold mb-2">Overview</h3>
-                <p className="text-gray-400 mb-4 break-words">
-                  {project.decisions}
-                </p>
-              </div>
-            )}
+          {/* Tech stack chips */}
+          <div className="flex flex-wrap justify-center gap-2">
+            {project?.techStack.map((t, i) => (
+              <span
+                key={i}
+                className="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm"
+              >
+                {t}
+              </span>
+            ))}
           </div>
         </div>
-      </section>
+
+        {project?.images && project.images.length > 0 && (
+          <img
+            src={project.images[0]}
+            alt={project.title}
+            className="rounded-xl shadow-lg mx-auto max-h-96 object-contain mb-12"
+          />
+        )}
+      </div>
     </div>
   );
 };
