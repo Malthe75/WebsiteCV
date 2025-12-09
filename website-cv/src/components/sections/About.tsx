@@ -1,8 +1,24 @@
 import { RevealOnScroll } from "../revealOnScroll";
 import { TimelineEntries } from "../Details/Timeline";
 export const About = () => {
-  const frontendSkills = ["React", "Vue", "TypeScript", "TailwindCSS"];
-  const backendSkills = ["Java", "C#", "MongoDB", "Python", "PHP", "DA?"];
+  const frontendSkills = [
+    "HTML",
+    "CSS",
+    "React",
+    "Vue",
+    "TypeScript",
+    "TailwindCSS",
+  ];
+  const backendSkills = [
+    "C#",
+    "Java",
+    "Unity",
+    "PostgreSQL",
+    "Docker",
+    "AWS",
+    "MongoDB",
+    "Python",
+  ];
 
   return (
     <section
@@ -11,7 +27,7 @@ export const About = () => {
     >
       <RevealOnScroll>
         <div className="max-w-8xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-teal-400 to-blue-600 bg-clip-text text-transparent text-center">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-400 to-blue-600 bg-clip-text text-transparent text-center">
             {" "}
             About Me
           </h2>
@@ -25,7 +41,7 @@ export const About = () => {
               daily, both at work and in my free time.
             </p>
 
-            <div className="w-full max-w-2xl mx-auto mt-10">
+            <div className="w-full max-w-3xl mx-auto mt-10">
               <div className="flex rounded-full border border-white/10 overflow-hidden backdrop-blur p-6">
                 {/* LEFT – FRONTEND */}
                 <div className="flex-1 pr-6 border-r border-white/10">
@@ -63,25 +79,65 @@ export const About = () => {
               </div>
             </div>
           </div>
-          {/* Horizontal Timeline */}
-          <div className="mt-16 w-full">
-            <div className="relative w-full border-t border-gray-600">
-              <ul className="flex justify-between text-center mt-6 px-4">
-                {TimelineEntries.map((item, index) => (
-                  <li
-                    key={index}
-                    className="relative flex flex-col items-center"
-                  >
-                    {/* Dot */}
-                    <div className="w-4 h-4 bg-blue-500 rounded-full absolute -top-8 border-4 border-gray-900"></div>
+          <div className="mt-10 w-full">
+            <div className="relative w-full h-40">
+              {/* Line */}
+              <div className="absolute top-1/2 w-full border-t border-gray-600"></div>
 
-                    {/* Label */}
-                    <p className="text-sm text-gray-300 mt-2">
-                      {item.year} - {item.label}
-                    </p>
-                    <p className="text-sm max-w-40">{item.description}</p>
-                  </li>
-                ))}
+              <ul className="flex justify-between px-4">
+                {TimelineEntries.map((item, index) => {
+                  const isTop = index % 2 === 0;
+
+                  return (
+                    <li
+                      key={index}
+                      className="
+              relative
+              w-52
+              h-40
+              flex
+              flex-col
+              items-center
+            "
+                    >
+                      {/* TOP */}
+                      {isTop && (
+                        <div className="absolute top-0 left-0 w-full h-1/2 flex flex-col justify-end items-center px-2">
+                          <p className="text-xs text-gray-400 text-center">
+                            {item.description}
+                          </p>
+                          <p className="mb-2 text-sm text-gray-100 font-semibold">
+                            {item.year} – {item.label}
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Dot */}
+                      <div
+                        className="
+              absolute 
+              top-1/2 left-1/2 
+              -translate-x-1/2 -translate-y-1/2
+              w-4 h-4 bg-blue-500 rounded-full 
+              border-4 border-gray-900
+            "
+                      ></div>
+
+                      {/* BOTTOM */}
+                      {!isTop && (
+                        <div className="absolute bottom-0 left-0 w-full h-1/2 flex flex-col justify-start items-center px-2">
+                          <p className="mt-2 text-sm text-gray-100 font-semibold">
+                            {item.year} – {item.label}
+                          </p>
+
+                          <p className="text-xs text-gray-400 text-center">
+                            {item.description}
+                          </p>
+                        </div>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

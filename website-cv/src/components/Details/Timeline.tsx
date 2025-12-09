@@ -8,26 +8,29 @@ export const TimelineEntries: TimelineEntry[] = [
   {
     label: "SDU",
     year: "2020",
-    description: "Start Diploma Engineer in Software Technology",
+    description:
+      "Began Diploma in Software Technology at the University of Southern Denmark",
   },
   {
     label: "Intellifinder",
-    year: "2024",
-    description: "Half year internship required for Education",
+    year: "2023",
+    description:
+      "Completed a six-month educational internship focusing on software development",
   },
   {
     label: "SDU",
     year: "2024",
-    description: "Finished my Diploma Engineer in Software Technology",
+    description: "Graduated with a Diploma in Software Technology",
   },
   {
     label: "Skandiq",
     year: "2025",
-    description: "Part-time development on Skandiq's Shopify website",
+    description:
+      "Contributed to the redesign and implementation of Skandiq’s new Shopify-based website",
   },
   {
     label: "HR-ON",
     year: "2025",
-    description: "Contract employee for 5 months",
+    description: "Served as a contract developer on a five-month engagement",
   },
 ];
