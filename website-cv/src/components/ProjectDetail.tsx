@@ -1,6 +1,10 @@
 import { Navbar } from "./Navbar";
 import { useState } from "react";
-import { schoolProjects } from "./Details/Projects";
+import {
+  schoolProjects,
+  personalProjects,
+  workProjects,
+} from "./Details/Projects";
 import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules"; // v10+ React import
@@ -10,8 +14,9 @@ import "swiper/css/pagination";
 
 export const ProjectDetail: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
-  const project = schoolProjects.find((p) => p.id === projectId);
+  const allProjects = [...schoolProjects, ...personalProjects, ...workProjects];
 
+  const project = allProjects.find((p) => p.id === projectId);
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -19,9 +24,11 @@ export const ProjectDetail: React.FC = () => {
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       <div className="pt-16 px-4 max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl mt-15 font-bold mb-4">{project?.title}</h1>
+        <h1 className="text-4xl mt-15 mb-4 font-bold bg-gradient-to-r from-teal-400 to-blue-600 bg-clip-text text-transparent text-center">
+          {project?.title}
+        </h1>
         {project?.overview && (
-          <p className="text-gray-700 text-lg mb-6">{project.overview}</p>
+          <p className="text-gray-300 text-lg mb-6">{project.overview}</p>
         )}
 
         {/* METADATA BAR */}
@@ -30,7 +37,7 @@ export const ProjectDetail: React.FC = () => {
                 gap-4 mb-10 px-4 py-3 rounded-lg border border-gray-800 
                 bg-gray-900/40"
         >
-          {project?.githubUrl && (
+          {project?.githubUrl ? (
             <a
               href={project.githubUrl}
               target="_blank"
@@ -38,6 +45,10 @@ export const ProjectDetail: React.FC = () => {
             >
               GitHub
             </a>
+          ) : (
+            <span className="px-5 py-2 bg-gray-800 rounded-full text-gray-300">
+              No Github
+            </span>
           )}
 
           <span className="hidden md:block text-gray-500">•</span>
@@ -69,7 +80,7 @@ export const ProjectDetail: React.FC = () => {
                 <img
                   src={img}
                   alt={`${project.title} screenshot ${i + 1}`}
-                  className="rounded-xl shadow-lg object-contain mx-auto max-h-96"
+                  className="rounded-xl shadow-lg object-contain mx-auto"
                 />
               </SwiperSlide>
             ))}

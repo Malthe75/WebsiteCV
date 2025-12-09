@@ -59,7 +59,7 @@ export const ProjectCards = () => {
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div className="p-6 rounded-xl border border-white/10 min-h-[340px] flex flex-col hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
+    <div className="p-6 rounded-xl border border-white/10 min-h-[300px] flex flex-col hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
       <h3 className="text-xl font-bold mb-2">{project.title}</h3>
       <p className="text-gray-400 mb-4">{project.smallDesc}</p>
       <div className="flex flex-wrap gap-2">
@@ -73,7 +73,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </span>
         ))}
       </div>
-      <div className="flex justify-between items-center mt-8 font-bold">
+      <div className="flex justify-between items-center mt-auto pt-6 font-bold">
         <a
           href={`/project/${project.id}`}
           className="text-blue-400 hover:text-blue-300 transition-colors"
