@@ -1,5 +1,5 @@
 import { Navbar } from "./Navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   schoolProjects,
   personalProjects,
@@ -18,6 +18,17 @@ export const ProjectDetail: React.FC = () => {
 
   const project = allProjects.find((p) => p.id === projectId);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const [fullImage, setFullImage] = useState<string | null>(null);
+
+  // Close on ESC
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setFullImage(null);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-200">
@@ -66,25 +77,40 @@ export const ProjectDetail: React.FC = () => {
         </div>
 
         {/* SWIPER IMAGE VIEWER */}
+        {/* SWIPER IMAGE VIEWER */}
         {project?.images && project.images.length > 0 && (
           <Swiper
             modules={[Navigation, Pagination]}
             navigation
-            pagination={{ clickable: true }}
-            spaceBetween={16}
             slidesPerView={1}
-            className="max-w-4xl mx-auto mb-12"
+            className="max-w-3xl mx-auto mb-12"
           >
             {project.images.map((img, i) => (
               <SwiperSlide key={i}>
-                <img
-                  src={img}
-                  alt={`${project.title} screenshot ${i + 1}`}
-                  className="rounded-xl shadow-lg object-contain mx-auto"
-                />
+                <div className="h-[400px] w-full flex items-center justify-center">
+                  <img
+                    src={img}
+                    alt={`${project.title} screenshot ${i + 1}`}
+                    className="max-h-full max-w-2xl object-contain rounded-xl shadow-lg cursor-zoom-in hover:opacity-80 transition"
+                    onClick={() => setFullImage(img)}
+                  />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
+        )}
+
+        {/* FULLSCREEN MODAL */}
+        {fullImage && (
+          <div
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+            onClick={() => setFullImage(null)}
+          >
+            <img
+              src={fullImage}
+              className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
+            />
+          </div>
         )}
       </div>
     </div>

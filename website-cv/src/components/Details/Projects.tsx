@@ -29,24 +29,24 @@ export const schoolProjects: Project[] = [
       "Sustainable Development Goal",
       "Interactive",
     ],
-    images: ["/images/NeedForTree.png", "/images/NeedForTree.png"],
+    images: ["/images/NeedForTree.png"],
   },
   {
     id: "tv2-credits-database",
     title: "TV2 Credits Database - 2ⁿᵈ Semester",
     smallDesc:
       "A system, which aids in giving credits to contributors for TV2 programs",
-    techStack: ["Java", "PostgreSQL"],
-    githubUrl: "",
+    techStack: ["Java", "PostgreSQL", "JavaFX"],
+    githubUrl: "https://github.com/Malthe75/Semesterprojekt2",
     overview:
       "This project is a database system that helps TV2 manage and give credits to contributors for their programs. The system is designed to be user-friendly and efficient, allowing for easy management of credits.",
     features: ["Database System", "User Management", "Credit Management"],
     images: [
-      "/images/TV2/TV2_1.png",
-      "/images/TV2/TV2_2.png",
-      "/images/TV2/TV2_3.png",
-      "/images/TV2/TV2_4.png",
-      "/images/TV2/TV2_5.png",
+      "/images/tv2/TV2_1.png",
+      "/images/tv2/TV2_2.png",
+      "/images/tv2/TV2_3.png",
+      "/images/tv2/TV2_4.png",
+      "/images/tv2/TV2_5.png",
     ],
   },
   {
@@ -54,22 +54,27 @@ export const schoolProjects: Project[] = [
     title: "Beermachine System - 3ʳᵈ Semester",
     smallDesc:
       "A cyber physical system that connects to a beer machine and a GUI with controls for the machine",
-    techStack: ["Java", "JavaFX"],
-    githubUrl: "",
+    techStack: ["Java", "HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/SemPro3G4/3SemesterProject",
     overview:
       "This project is a cyber-physical system that connects to a beer machine and a GUI with controls for the machine. The system allows users to control the beer machine remotely and monitor its status.",
     features: ["Cyber-Physical System", "GUI", "Remote Control"],
+    images: [
+      "/images/beermachine/image_1.png",
+      "/images/beermachine/image_2.png",
+    ],
   },
   {
     id: "drone-assembly-line",
     title: "Drone Assembly Line - 4ᵗʰ Semester",
     smallDesc:
       "System which helps with communication between links in a drone assembly line",
-    techStack: ["Java", "AWS", "Docker"],
-    githubUrl: "",
+    techStack: ["Java", "JavaFX"],
+    githubUrl: "https://github.com/ngPsych/ST4G02",
     overview:
       "This project is a system that helps with communication between links in a drone assembly line. The system is designed to be scalable and flexible, allowing for easy integration with other systems.",
     features: ["Communication System", "Scalable", "Flexible"],
+    images: ["/images/droneAssembly/image.png"],
   },
   {
     id: "unity-card-game",
@@ -77,10 +82,11 @@ export const schoolProjects: Project[] = [
     smallDesc:
       "A videogame card game made in Unity, including assets made from the ground up",
     techStack: ["Unity", "C#", "Aseprite"],
-    githubUrl: "",
+    githubUrl: "https://github.com/OliverDahlWagner/AfgangsProject",
     overview:
       "This project is a videogame card game made in Unity, including assets made from the ground up. The game is designed to be fun and engaging, with a focus on gameplay and user experience.",
     features: ["Video Game", "Unity", "C#"],
+    images: [],
   },
 ];
 
