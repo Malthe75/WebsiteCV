@@ -29,7 +29,11 @@ export const schoolProjects: Project[] = [
       "Sustainable Development Goal",
       "Interactive",
     ],
-    images: ["/images/NeedForTree.png"],
+    images: [
+      "/images/worldOfZuul/image1.png",
+      "/images/worldOfZuul/image2.png",
+      "/images/worldOfZuul/image3.png",
+    ],
   },
   {
     id: "tv2-credits-database",
@@ -42,11 +46,11 @@ export const schoolProjects: Project[] = [
       "This project is a database system that helps TV2 manage and give credits to contributors for their programs. The system is designed to be user-friendly and efficient, allowing for easy management of credits.",
     features: ["Database System", "User Management", "Credit Management"],
     images: [
-      "/images/tv2/TV2_1.png",
-      "/images/tv2/TV2_2.png",
-      "/images/tv2/TV2_3.png",
-      "/images/tv2/TV2_4.png",
-      "/images/tv2/TV2_5.png",
+      "/images/tv2/image1.png",
+      "/images/tv2/image2.png",
+      "/images/tv2/image3.png",
+      "/images/tv2/image4.png",
+      "/images/tv2/image5.png",
     ],
   },
   {
@@ -60,8 +64,8 @@ export const schoolProjects: Project[] = [
       "This project is a cyber-physical system that connects to a beer machine and a GUI with controls for the machine. The system allows users to control the beer machine remotely and monitor its status.",
     features: ["Cyber-Physical System", "GUI", "Remote Control"],
     images: [
-      "/images/beermachine/image_1.png",
-      "/images/beermachine/image_2.png",
+      "/images/beermachine/image1.png",
+      "/images/beermachine/image2.png",
     ],
   },
   {
@@ -74,7 +78,7 @@ export const schoolProjects: Project[] = [
     overview:
       "This project is a system that helps with communication between links in a drone assembly line. The system is designed to be scalable and flexible, allowing for easy integration with other systems.",
     features: ["Communication System", "Scalable", "Flexible"],
-    images: ["/images/droneAssembly/image.png"],
+    images: ["/images/droneAssembly/image1.png"],
   },
   {
     id: "unity-card-game",
@@ -86,7 +90,11 @@ export const schoolProjects: Project[] = [
     overview:
       "This project is a videogame card game made in Unity, including assets made from the ground up. The game is designed to be fun and engaging, with a focus on gameplay and user experience.",
     features: ["Video Game", "Unity", "C#"],
-    images: [],
+    images: [
+      "/images/cardGame/image1.png",
+      "/images/cardGame/image2.png",
+      "/images/cardGame/image3.png",
+    ],
   },
 ];
 
