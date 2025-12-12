@@ -58,7 +58,7 @@ export const ProjectDetail: React.FC = () => {
             </a>
           ) : (
             <span className="px-5 py-2 bg-gray-800 rounded-full text-gray-300">
-              No Github
+              No Repository
             </span>
           )}
 
