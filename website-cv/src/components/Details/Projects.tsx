@@ -127,12 +127,13 @@ export const personalProjects: Project[] = [
   },
   {
     id: "unity-fighting-game",
-    title: "Unity 2D - Fighting Game",
+    title: "Unity 2D - Fighting Game (WIP)",
     smallDesc: "A 2D Figthing game incorporating real-life images",
-    techStack: ["Unity", "C#"],
-    githubUrl: "",
-    overview: "Placeholder",
-    features: ["Fighting game"],
+    techStack: ["Unity", "C#", "Python"],
+    githubUrl: "https://github.com/Malthe75/5260-fightaz",
+    overview:
+      "This project is a 2D fighting game that uses real life png images for characters. The game is a passion project with no incentive to make a profit. The real reasoning behind this project is to get better, build my resume and for giggles. The game is getting more complex by the day, and the ambitions might be a bit big. This means that characters end up using up towards 100 images, to create semi animations for them.",
+    images: ["/images/fightingGame/image1.png"],
   },
 ];
 
