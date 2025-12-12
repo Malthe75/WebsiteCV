@@ -104,11 +104,12 @@ export const personalProjects: Project[] = [
     title: "Website Portfolio",
     smallDesc:
       "Personal portfolio website to showcase my projects and skills (This website)",
-    techStack: ["React", "TypeScript", "Tailwind"],
-    githubUrl: "",
+    techStack: ["React", "TypeScript", "React", "Tailwind"],
+    githubUrl: "https://github.com/Malthe75/WebsiteCV",
     overview:
-      "This project is a personal portfolio website to showcase my projects and skills. The website is designed to be user-friendly and visually appealing, with a focus on showcasing my work.",
+      "This project is a personal portfolio website to showcase my projects and skills. The website is designed to be simple, and is mostly a means to showcase some of my more interesting/bigger projects.",
     features: ["Personal Portfolio", "Project Showcase", "About Me"],
+    images: ["/images/portfolio/image1.png"],
   },
   {
     id: "unity-slot-machine",
