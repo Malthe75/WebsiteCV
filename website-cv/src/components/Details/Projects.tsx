@@ -5,7 +5,7 @@ export type Project = {
   techStack: string[];
   githubUrl?: string;
   overview: string;
-  features: string[];
+  features?: string[];
   liveUrl?: string;
   images?: string[];
   challenges?: string;
@@ -113,11 +113,17 @@ export const personalProjects: Project[] = [
   {
     id: "unity-slot-machine",
     title: "Unity - Slot Machine",
-    smallDesc: "A fun project for a new years party",
+    smallDesc: "A slot machine with bad inside jokes for a new years party. ",
     techStack: ["Unity", "C#"],
-    githubUrl: "",
-    overview: "PLACEHOLDER",
-    features: ["Slot machine", "Fun"],
+    githubUrl: "https://github.com/Malthe75/newyears-slotmachine",
+    overview:
+      "This project was made as a surprise event for a new years party. It was one of my first real hobby projects and it helped ignite a spark for development once more for me. The slot machine involves a close friend group of mine and has many bad inside jokes. The game is made in Unity and uses various images, sound bits and animations.",
+    images: [
+      "/images/slotMachine/image1.png",
+      "/images/slotMachine/image2.png",
+      "/images/slotMachine/image3.png",
+      "/images/slotMachine/image4.png",
+    ],
   },
   {
     id: "unity-fighting-game",
