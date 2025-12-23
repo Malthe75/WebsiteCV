@@ -145,7 +145,7 @@ export const workProjects: Project[] = [
     smallDesc:
       "My project at HR-ON, used in production for converting, validating, merging and resizing various files",
     techStack: ["Typescript", "Docker", "CI/CD", "AWS Fargate", "Express"],
-    overview: "PLACEHOLDER",
+    overview: "This was the main project for HR-ON during the employment. It is a microservice used for handling various file operations, such as converting, validating, merging and resizing images. The service is built using TypeScript and runs in Docker containers on AWS Fargate. It is designed to be scalable and efficient, handling a good chunk of requests daily.",
     features: [
       "Microservice",
       "Conversion",
@@ -160,7 +160,7 @@ export const workProjects: Project[] = [
     smallDesc:
       "Part of a big redesign for Intellifinders frontend, involving the use of PrimeNG library",
     techStack: ["TypeScript", "MongoDB", "PHP"],
-    overview: "PLACEHOLDER",
+    overview: "This project was part of a big redesign for Intellifinders frontend. The redesign involved the use of the PrimeNG library to create a modern and user-friendly interface. The project required close collaboration with the design team to ensure that the new design met the needs of users while also being visually appealing.",
     features: ["PLACEHOLDER"],
   },
 ];

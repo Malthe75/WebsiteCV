@@ -10,7 +10,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules"; // v10+ React import
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 export const ProjectDetail: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();

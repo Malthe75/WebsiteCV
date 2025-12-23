@@ -48,13 +48,6 @@ export const Navbar: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
               {" "}
               Projects{" "}
             </a>
-            <a
-              href="/#contact"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              {" "}
-              Contact{" "}
-            </a>
           </div>
         </div>
       </div>
