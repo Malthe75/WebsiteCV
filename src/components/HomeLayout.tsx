@@ -8,17 +8,19 @@ import { About } from "./sections/About";
 import { ProjectCards } from "./sections/ProjectCards";
 
 function HomeLayout() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
+      {/* {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />} */}
 
-      <div
+      {/* <div
         className={`min-h-screen transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opacity-0"
         } bg-gray-950 text-gray-200`}
+      > */}
+        <div
+        className={`bg-gray-950 text-gray-200`}
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
