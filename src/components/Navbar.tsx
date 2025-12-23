@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { HashLink } from 'react-router-hash-link';
 
 interface NavbarProps {
   menuOpen: boolean;
@@ -27,27 +28,27 @@ export const Navbar: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="/#home"
+            <HashLink
+              smooth to="/#home"
               className="text-gray-300 hover:text-white transition-colors"
             >
               {" "}
               Home{" "}
-            </a>
-            <a
-              href="/#about"
+            </HashLink>
+            <HashLink
+              smooth to="/#about"
               className="text-gray-300 hover:text-white transition-colors"
             >
               {" "}
               About{" "}
-            </a>
-            <a
-              href="/#projects"
+            </HashLink>
+            <HashLink
+              smooth to="/#projects"
               className="text-gray-300 hover:text-white transition-colors"
             >
               {" "}
               Projects{" "}
-            </a>
+            </HashLink>
           </div>
         </div>
       </div>

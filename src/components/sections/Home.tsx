@@ -1,4 +1,6 @@
 import { RevealOnScroll } from "../revealOnScroll";
+import { HashLink } from 'react-router-hash-link';
+
 
 export const Home = () => {
   return (
@@ -18,22 +20,22 @@ export const Home = () => {
 
           <div className="flex flex-col items-center space-y-4">
             <div className="space-x-4">
-              <a
-                href="#about"
+              <HashLink
+                smooth to="#about"
                 className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden
                                 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]
                                 inline-flex justify-center items-center min-w-[150px] text-center"
               >
                 About me
-              </a>
-              <a
-                href="#projects"
+              </HashLink>
+              <HashLink
+                smooth to="#projects"
                 className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden
                                 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]
                                 inline-flex justify-center items-center min-w-[150px] text-center"
               >
                 View projects
-              </a>
+              </HashLink>
             </div>
           </div>
         </div>

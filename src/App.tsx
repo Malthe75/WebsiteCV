@@ -1,7 +1,7 @@
 // App.tsx
 import { Routes, Route } from 'react-router-dom';
 import HomeLayout from './components/HomeLayout.tsx';
-import { ProjectDetail } from './components/ProjectDetail';
+import { ProjectDetail } from './components/ProjectDetail.tsx';
 import { About } from './components/sections/About.tsx';
 
 function App() {

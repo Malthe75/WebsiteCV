@@ -5,6 +5,7 @@ import {
   schoolProjects,
 } from "../Details/Projects";
 import type { Project } from "../Details/Projects";
+import { Link } from 'react-router-dom';
 
 export const ProjectCards = () => {
   return (
@@ -74,13 +75,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
         ))}
       </div>
       <div className="flex justify-between items-center mt-auto pt-6 font-bold">
-        <a
-          href={`/project/${project.id}`}
+        <Link
+          to={`/project/${project.id}`}
           className="text-blue-400 hover:text-blue-300 transition-colors"
         >
           {" "}
           View Project{" "}
-        </a>
+        </Link>
       </div>
     </div>
   );
