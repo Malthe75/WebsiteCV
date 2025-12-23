@@ -1,6 +1,6 @@
 // components/HomeLayout.tsx (new file)
 import { useState } from "react";
-import { LoadingScreen } from "./LoadingScreen";
+// import { LoadingScreen } from "./LoadingScreen";
 import { Navbar } from "./Navbar";
 import { MobileMenu } from "./MobileMenu";
 import { Home } from "./sections/Home";
